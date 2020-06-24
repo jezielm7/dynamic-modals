@@ -1,6 +1,14 @@
-import React, { useRef } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import React, { useRef, useState } from 'react';
+import {
+  View,
+  Text,
+  Image,
+  Animated,
+  TouchableOpacity,
+} from 'react-native';
 import { Modalize } from 'react-native-modalize';
+
+import PlayerIcon from 'react-native-vector-icons/Feather';
 
 import styles from './styles';
 
@@ -13,7 +21,7 @@ const Home = () => {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity 
+      <TouchableOpacity
         style={styles.button}
         onPress={showModal}
       >
@@ -22,21 +30,30 @@ const Home = () => {
 
       <Modalize
         ref={modalRef}
-        snapPoint={160}
-        HeaderComponent={
-          <View style={{ backgroundColor: '#282a40'}}>
-            <Text style={styles.modalTitle}>Options</Text>
-          </View>
-        }
+        snapPoint={100}
       >
         <View style={styles.modalContent}>
-          <TouchableOpacity style={styles.upBtn}>
-            <Text style={{ color: '#f2c144' }}>Update  🖍</Text>
+          <View style={styles.detailArea}>
+            <Image
+              source={require('../assets/logo2.jpg')}
+              style={styles.detailImage}
+            />
+
+            <Text style={styles.musicTitle}>Love & Hate</Text>
+          </View>
+          
+          <TouchableOpacity>
+            <PlayerIcon name="arrow-left-circle" size={30} color='#fff' />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.delBtn}>
-            <Text style={{ color: '#304050' }}>Delete  🗑</Text>
+          <TouchableOpacity>
+            <PlayerIcon name="play-circle" size={42} color='#fff' />
           </TouchableOpacity>
+
+          <TouchableOpacity>
+            <PlayerIcon name="arrow-right-circle" size={30} color='#fff' />
+          </TouchableOpacity>
+
         </View>
       </Modalize>
     </View>

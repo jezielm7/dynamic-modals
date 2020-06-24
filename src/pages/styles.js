@@ -20,33 +20,23 @@ const styles = StyleSheet.create({
   },
   modalContent: {
     flex: 1,
-    height: 180,
+    height: 100,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
     backgroundColor: '#282a40',
   },
-  upBtn: {
-    padding: 15,
-    borderRadius: 8,
-    marginBottom: 50,
-    alignItems: 'center',
+  detailArea: {
+    alignItems: 'center', 
     justifyContent: 'center',
-    backgroundColor: '#364c63',
   },
-  delBtn: {
-    padding: 15,
-    borderRadius: 8,
-    marginBottom: 50,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#f2c144',
+  detailImage: {
+    width: 65, 
+    height: 65,
+    marginBottom: 3.5,
   },
-  modalTitle: {
-    fontSize: 20,
-    marginTop: 15,
-    color: '#f2c144',
-    textAlign: 'center',
+  musicTitle: {
+    color: '#e4b02b',
   },
 });
 
